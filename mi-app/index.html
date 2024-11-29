@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Productos</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-center mb-6">LISTADO DE PRODUCTOS</h1>
+        
+        <!-- Categorías -->
+        <div id="categories" class="flex justify-center space-x-4 mb-6">
+            <button class="category" data-category="todos">Todos</button>
+            <button class="category" data-category="canastafamiliar">Canasta Familiar</button>
+            <button class="category" data-category="cuidadopersonal">Cuidado Personal</button>
+            <button class="category" data-category="dulces">Dulces</button>
+            <button class="category" data-category="mascotas">Mascotas</button>
+            <button class="category" data-category="aseo">Aseo</button>
+        </div>
+
+        <!-- Lista de Productos -->
+        <div id="product-list" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6"></div>
+
+        <!-- Sección de Productos Seleccionados -->
+        <div class="mt-8">
+            <h2 class="text-2xl mb-4">Productos Seleccionados</h2>
+            <div id="selected-products" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 bg-white p-4 rounded-lg shadow-md">
+                <p id="no-products" class="text-gray-500 col-span-full text-center">Aún no has seleccionado ningún producto</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
